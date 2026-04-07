@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Laptop Store TWA</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="app-header">
+            <h1 id="view-title">متجر اللابتوبات</h1>
+            <div id="filter-bar" class="filter-bar">
+                <input type="text" id="search-input" placeholder="ابحث عن جهازك المثالي...">
+            </div>
+        </header>
+
+        <main id="main-container">
+            <section id="view-catalog" class="view active">
+                <div class="tags-container" id="tags-list"></div>
+                <div class="product-grid" id="product-grid"></div>
+            </section>
+
+            <section id="view-detail" class="view">
+                <div id="product-content"></div>
+            </section>
+
+            <section id="view-compare" class="view">
+                <div class="compare-wrapper" id="compare-container"></div>
+            </section>
+
+            <section id="view-checkout" class="view">
+                <div id="order-summary"></div>
+            </section>
+        </main>
+
+        <footer class="app-footer" id="app-footer">
+            <div class="price-info">
+                <span>الإجمالي:</span>
+                <span id="total-price">0</span> <small>ج.م</small>
+            </div>
+            <button id="action-btn" class="main-btn">عرض السلة</button>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
